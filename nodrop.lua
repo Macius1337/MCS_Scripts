@@ -1,7 +1,7 @@
 -- PREVENTING THE GUN FROM DROP
-Citizen.CreateThread(function()
+CreateThread(function()
 	while true do
-	  Citizen.Wait(100)
+	  Wait(100)
 		RemoveAllPickupsOfType(0x6E4E65C2)
 		RemoveAllPickupsOfType(0x741C684A)
 		RemoveAllPickupsOfType(0x68605A36)
@@ -111,9 +111,9 @@ Citizen.CreateThread(function()
 end)
 
 --DELETING WEAPONS IN LSPD && LSSD VEHICLES
-Citizen.CreateThread(function()
+CreateThread(function()
 	while true do
-		Citizen.Wait(1)
+		Wait(1)
 		DisablePlayerVehicleRewards(PlayerId())
 	end
 end)
